@@ -15,8 +15,10 @@ export const useTree = () => {
         const newNode = new Node("Node", []);
 
         const add = (prevTree: Node[]) => {
+            if (prevTree.length > 0 && parentId === null) return prevTree;
+
             if (parentId == null) return [...prevTree, newNode];
-            
+
             const addChildNode = (nodes: Node[]): Node[] => {
                 return nodes.map((node) =>
                     node.id === parentId
@@ -31,6 +33,7 @@ export const useTree = () => {
     }, []);
 
     const deleteNode = useCallback((id: Guid) => {
+
         const remove = (nodes: Node[]): Node[] => {
             return nodes
                 .filter((node) => node.id !== id)
@@ -44,6 +47,7 @@ export const useTree = () => {
     }, []);
 
     const editNode = useCallback((id: Guid, newName: string) => {
+        
         const update = (nodes: Node[]): Node[] => {
             return nodes
                 .map((node) =>
@@ -59,5 +63,4 @@ export const useTree = () => {
     const resetTree = useCallback(() => setTree(initialTree), []);
 
     return { tree, addNode, deleteNode, editNode, resetTree };
-
 };
