@@ -1,0 +1,83 @@
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#tree {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px #dc3f5f;
+    background-color: #fff3f377;
+}
+
+#text-title {
+    display: flex;
+    justify-content: center;
+    margin: 4px;
+    padding: 4px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px #dc3f5f;
+    font-family: 'Arial', serif;
+    font-style: oblique;
+    color: white;
+    background-color: #fd6b886f;
+}
+
+.tree-button {
+    margin: 10px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-style: oblique;
+    color: white;
+    background-color: #f8718c;
+}
+
+.tree-button:hover {
+    background-color: #f28b9f;
+}
+
+.node-item {
+    margin: 6px;
+    border-radius: 4px;
+    font-family: 'Arial', serif;
+    font-style: oblique;
+}
+
+.node-input {
+    padding-left: 4px;
+}
+
+.node-button {
+    margin: 3px;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-style: oblique;
+    box-shadow: 0 2px 4px #dc3f5f;
+    color: #F6F5F2;
+}
+
+#add-button {
+    background-color: #fd6b88c0;
+}
+
+#add-button:hover {
+    background-color: #f88da2c0;
+}
+
+#delete-button {
+    background-color: #488fe5;
+    box-shadow: 0 2px 3px #025bc6;
+}
+
+#delete-button:hover {
+    background-color: #559AEF;
+}
